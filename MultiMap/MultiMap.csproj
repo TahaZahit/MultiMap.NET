@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>MultiMap.NET</PackageId>
+    <AssemblyName>MultiMap.NET</AssemblyName>
+    <RootNamespace>MultiMaps</RootNamespace>
+    <Authors>Taha Zahit Hakyemez</Authors>
+    <Description>Thread-safe, high-performance mutable multi-map for .NET. Stores multiple values per key, implements ILookup&lt;TKey, TValue&gt; for drop-in LINQ interop, and preserves insertion order. Also available as MultiValueDictionary.</Description>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/TahaZahit/MultiMap.NET</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/TahaZahit/MultiMap.NET</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>multimap;multivaluedictionary;lookup;duplicate-keys;dictionary;map;thread-safe;concurrency;collections;datastructure</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

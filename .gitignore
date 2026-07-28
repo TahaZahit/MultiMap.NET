@@ -1,0 +1,17 @@
+bin/
+obj/
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+*.userprefs
+nuget-packages/
+*.nupkg
+*.snupkg
+TestResults/
+[Dd]ebug/
+[Rr]elease/
+project.lock.json
+artifacts/
+.DS_Store
