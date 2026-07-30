@@ -1,0 +1,16 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "MultiMap.NET",
+  "description": "Thread-safe mutable multi-map for .NET — multiple values per key, implements ILookup for drop-in LINQ interop.",
+  "excludeFolders": ["MultiMap.Tests"],
+  "rules": [
+    "MultiMap<TKey, TValue> is IDisposable — it holds a ReaderWriterLockSlim. Dispose it, or declare it with using, when the map is not a long-lived singleton.",
+    "The safe read is TryGetValues (plural), not TryGetValue — it yields the whole collection for the key.",
+    "Remove(key, value) drops a single pair; RemoveAll(key) drops every value under the key.",
+    "Count is the number of keys. Use ValueCount for the number of pairs.",
+    "It implements ILookup<TKey, TValue>, so it can be assigned to an ILookup variable with no conversion and no copy. Use that instead of rebuilding via Enumerable.ToLookup, which produces an immutable snapshot.",
+    "Returned collections are snapshots, so enumerating while other threads mutate is safe.",
+    "Insertion order is preserved under each key. Duplicates are allowed by default (list semantics); set semantics are opt-in.",
+    "Targets netstandard2.0 and has no dependencies."
+  ]
+}
